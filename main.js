@@ -477,19 +477,13 @@ function findCharacterIndex(str, char) {
             return i;
         }
     }
-    // If the character is not found, return -1
+  
     return -1;
 }
-
-// Example usage:
 const inpString = 'Hello World';
 const charToFind = 'o';
 const charIndex = findCharacterIndex(inpString, charToFind);
-if (charIndex !== -1) {
-    console.log(`The index of '${charToFind}' in "${inpString}" is ${charIndex}`);
-} else {
-    console.log(`'${charToFind}' is not found in "${inpString}"`);
-}
+console.log(charIndex);
 //38.    Write a function that removes duplicates from an array.
 
 const removeDuplicate=(dup)=>{
@@ -786,17 +780,19 @@ console.log(`${celsiusTemperature}Celsius is equal to ${celsiusToFahrenheit(cels
 //64.    Write a function that generates a pyramid pattern of a given height.function generatePyramid(height) {
     // Iterate over each row of the pyramid
     function Pyramid(heights) {
+        let rowy ='';
         for (let it = 1; it<= heights; it++) {
-            let rowy = '';
+        
             for (let jj = 1; jj <= heights- it; jj++) {
                 rowy += ' ';
             }
             for (let kb = 1; kb <= 2 * it - 1; kb++) {
                 rowy+= '*';
             }
-            
-            console.log(rowy); 
+            rowy +='\n';
         }
+            console.log(rowy); 
+        
     }
     Pyramid(5);
 
@@ -910,8 +906,6 @@ function trafficLight(colorCode) {
     }
     return color;
 }
-
-
 console.log(trafficLight(1));
 
 //e.    Month Name:
