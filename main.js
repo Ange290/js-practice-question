@@ -262,15 +262,17 @@ console.log('sort first element ' ,sortFirst);
 //Example:
 //For the string: “Hello World”
 //The number of characters is 10
-const charNumber=(strings) =>{
-    let removeSpace = strings.replace(/\s/g, '');
-if (removeSpace) {
- return removeSpace.length;
-    }
-}
-let strings ='My name is Ange';
-console.log('The number of character is ',charNumber(strings));
 
+const counts=(amr)=>{
+    amr.trim();
+    let amf =[...amr];
+
+    let fils = amf.filter((char)=> {
+        return char !== ' ';
+    });
+    return fils.length;
+}
+console.log('The number of character is ',counts('you are good'));
 
 //20.    Create a function that displays an even number between 1 and 100
 const evenNumber=()  =>{
@@ -1011,8 +1013,9 @@ const circles=(shape, side, height, base, radius)=>{
      }
      return area;
     }
-     let kami =circles('square',4,5,7,2,9);
-    console.log(`Area of ${shape} shape is`,kami);
+    let shape='circle';
+     let kamis =circles('square',4,5,7,2,9);
+    console.log(`Area of ${shape} shape is`,kamis);
 //i.    Season Detector:
 //Create a program that takes a month as input and outputs the corresponding season (spring, summer, fall, winter) using a switch case.
 
