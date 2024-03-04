@@ -992,42 +992,27 @@ let targetCurrency = 'EUR';
 console.log(`Converted amount: ${convertCurrency(amounts, sourceCurrency, targetCurrency)} ${targetCurrency}`);
 //h.    Shape Area:
 //Write a program that calculates and outputs the area of different shapes (circle, square, triangle) based on user input using a switch case.
-function calculateArea(shape, dimensions) {
+const circles=(shape, side, height, base, radius)=>{
     let area;
-    switch (shape) {
+    
+     switch (shape) {
         case 'circle':
-            if (dimensions.length === 1) {
-                const radius = dimensions[0];
-                area = Math.PI * radius * radius;
-            } else {
-                area = 'Invalid dimensions for circle';
-            }
+     area= Math.PI * radius * radius ;
             break;
-        case 'square':
-            if (dimensions.length === 1) {
-                const side = dimensions[0];
-                area = side * side;
-            } else {
-                area = 'Invalid dimensions for square';
-            }
-            break;
-        case 'triangle':
-            if (dimensions.length === 2) {
-                const base = dimensions[0];
-                const height = dimensions[1];
-                area = 0.5 * base * height;
-            } else {
-                area = 'Invalid dimensions for triangle';
-            }
-            break;
+            case 'square':
+               area=   side * side ;
+                       break;
+                       case 'triangle':
+                        area=  1/2*(base * height) ;
+                               break;
         default:
             area = 'Invalid shape';
+            break;
+     }
+     return area;
     }
-    return area;
-}
-console.log(calculateArea('circle', [5])); 
-console.log(calculateArea('square', [4])); 
-console.log(calculateArea('triangle', [3, 6])); 
+     let kami =circles('square',4,5,7,2,9);
+    console.log(`Area of ${shape} shape is`,kami);
 //i.    Season Detector:
 //Create a program that takes a month as input and outputs the corresponding season (spring, summer, fall, winter) using a switch case.
 
