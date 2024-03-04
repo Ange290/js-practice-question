@@ -765,19 +765,20 @@ console.log(containsOnlyDigits("123"));
 
 //62.    Write a function that counts the number of words in a sentence.
 function countWords(sentence) {
-    const words = sentence.split(/\s+/);
-    return words.length;
-}
-const sentenc = " the learning is good";
-console.log("Number of words:", countWords(sentence));
+    let rr =sentence.split(' ');
+      let words = rr.filter((word)=> word !==' ');
+      return words.length;
+   }
+   const sentences = "the learning is good";
+   console.log("Number of words:", countWords(sentences));
 
 //63.    Write a function that converts a temperature from Celsius to Fahrenheit.
-function celsiusToFahrenheit(celsius) {
+function celsiusToFah(celsius) {
     const fahrenheit = (celsius * 9/5) + 32;
  return fahrenheit;
 }
-const celsiusTemperature = 25;
-console.log(`${celsiusTemperature}Celsius is equal to ${celsiusToFahrenheit(celsiusTemperature)}Fahrenheit`);
+const celsiusTemp = 25;
+console.log(`${celsiusTemp}Celsius is equal to ${celsiusToFah(celsiusTemp)}Fahrenheit`);
 
 //64.    Write a function that generates a pyramid pattern of a given height.function generatePyramid(height) {
     // Iterate over each row of the pyramid
